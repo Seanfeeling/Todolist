@@ -1,34 +1,39 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ToDo List</title>
+    <title>Todo List</title>
     <link rel="stylesheet" href="./css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" >
 </head>
+
 <body>
-    <!-- 頁首區 -->
-    <header>       
+    <header>
         <h1>Todo List</h1>
     </header>
 
-    <!-- 表單區 -->
+
     <form>
-        <input type="text" placeholder="代辦清單">
-        <input type="number" placeholder="Y" min="2000" max="2050">
-        <input type="number" placeholder="M" min="1" max="12">
-        <input type="number" placeholder="D" min="1" max="31">
-        <button type="submit">新增清單</button>
+        <input type="text">
+        <input type="number" mix="2021" max="2050" placeholder="Y" required>
+        <input type="number" mix="1" max="12" placeholder="M" required>
+        <input type="number" min="1" max="31" placeholder="D">
+        <!-- 在js內已取消表單功能，所以標籤內所設定的規定都無用 -->
+        <button type="submit">Add to list</button>
     </form>
-    
-    <div>
-        <!-- 按鈕區 -->
+
+
+
+    <div class="sort">
         <button class="sort">依時間排序</button>
-        <button>清除</button>
+        <button class="delete">清除</button>
     </div>
-    <!-- 項目放置區 -->
-     <section class="item"></section>
+
+    <section></section>
+
 </body>
 <script src="./js/script.js"></script>
+
 </html>

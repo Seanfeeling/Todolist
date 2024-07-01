@@ -247,7 +247,7 @@ function mergeSort(arr) {
     }
 }
 
-let sortButton=document.querySelector("div.sort button");
+let sortButton=document.querySelector("div.sort button.sort");
 sortButton.addEventListener("click",()=>{
     let sortedArray=mergeSort(JSON.parse(localStorage.getItem("list")));
     localStorage.setItem("list",JSON.stringify(sortedArray));
@@ -258,3 +258,13 @@ sortButton.addEventListener("click",()=>{
     }
     loadData();
 }) 
+
+let deleteButton=document.querySelector("div.sort button.delete");
+deleteButton.addEventListener("click",()=>{
+    localStorage.removeItem("list");
+
+    let len = section.children.length;
+    for (let i = 0; i < len; i++) {
+        section.children[0].remove();
+    }
+});
